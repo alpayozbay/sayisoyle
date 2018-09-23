@@ -18,13 +18,11 @@ def sayısöyle(sayı):
 
     def üçlüsayısöyle(sayı):
         sonuç = ''
-        if (sayı==0): sonuç = 'sıfır'
-        elif (sayı<1000):
-            sayı = int(sayı)
-            if (sayı>199): sonuç = birlik[sayı//100 - 1] + ' yüz'
-            elif (sayı>99): sonuç = 'yüz'
-            if ((sayı%100)>9): sonuç += ' '+onluk[(sayı%100)//10 -1]
-            if (sayı%10>0): sonuç += ' '+birlik[sayı%10-1]
+        sayı = int(sayı)
+        if (sayı>199): sonuç = birlik[sayı//100 - 1] + ' yüz'
+        elif (sayı>99): sonuç = 'yüz'
+        if ((sayı%100)>9): sonuç += ' '+onluk[(sayı%100)//10 -1]
+        if (sayı%10>0): sonuç += ' '+birlik[sayı%10-1]
 
         return sonuç.strip()
 
