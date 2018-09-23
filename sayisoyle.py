@@ -18,7 +18,6 @@ def sayısöyle(sayı):
 
     def üçlüsayısöyle(sayı):
         sonuç = ''
-        sayı = int(sayı)
         if (sayı>199): sonuç = birlik[sayı//100 - 1] + ' yüz'
         elif (sayı>99): sonuç = 'yüz'
         if ((sayı%100)>9): sonuç += ' '+onluk[(sayı%100)//10 -1]
