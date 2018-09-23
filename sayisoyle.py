@@ -18,6 +18,7 @@ def sayısöyle(sayı):
 
     def üçlüsayısöyle(sayı):
         sonuç = ''
+        sayı = int(sayı)
         if (sayı>199): sonuç = birlik[sayı//100 - 1] + ' yüz'
         elif (sayı>99): sonuç = 'yüz'
         if ((sayı%100)>9): sonuç += ' '+onluk[(sayı%100)//10 -1]
@@ -42,7 +43,9 @@ def sayısöyle(sayı):
     sonuç = ''
     if (sayı==0): sonuç = 'sıfır'
     else:
-        ondalık = int(str(sayı).split('.')[1])
+        ondalık = 0
+        if (sayı-int(sayı)>0):
+            ondalık = int(str(sayı).split('.')[1])
 
         for i in range(0,6):
             kontrol = 10**((5-i)*3)
